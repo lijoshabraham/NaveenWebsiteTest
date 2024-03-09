@@ -27,6 +27,15 @@ public class AccountLoginPage extends TestBase {
 	@FindBy(css = ".collapse>ul li:nth-of-type(6) a")
 	WebElement phoneAndPDABtn;
 	
+	@FindBy(css = "div.alert")
+	WebElement failureAlert;
+	
+	
+	public String getFailureAlert() {
+		return failureAlert.getText();
+	}
+	
+	
 	public AccountRegisterPage clickNewAccountContinueBtn() {
 		newAccountContinueBtn.click();
 		return new AccountRegisterPage();

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="naveenautomation.tests.CategoryAndPath24PageTest">
+      <class name="naveenautomation.tests.MyAccountPageTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="setUpLogger"/>
-          <include name="validateProductSort"/>
+          <include name="validateUserCanEditAffiliateInformation"/>
+          <include name="closeBrowser"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- naveenautomation.tests.CategoryAndPath24PageTest -->
+      </class> <!-- naveenautomation.tests.MyAccountPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
