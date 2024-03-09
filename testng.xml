@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+
+		<listener
+			class-name="com.naveenautomation.Listeners.CustomListener"></listener>
+		<listener
+			class-name="com.naveenautomation.Listeners.TransformerForRetry"></listener>
+		<listener
+			class-name="com.naveenautomation.Listeners.ExtentReportListener"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="naveenautomation.tests.AddressBookPageTest" />
+			<class name="naveenautomation.tests.MyAccountPageTest" />
+			<class name="naveenautomation.tests.AccountLoginPageTest" />
+			<class name="naveenautomation.tests.HomePageTest" />
+			<class name="naveenautomation.tests.AboutUsPageTest" />
+			<class
+				name="naveenautomation.tests.DeliveryInformationPageTest" />
+			<class name="naveenautomation.tests.PrivacyPolicyPageTest" />
+			<class name="naveenautomation.tests.TermsAndConditionsPageTest" />
+			<class name="naveenautomation.tests.ContactUsPageTest" />
+			<class name="naveenautomation.tests.SiteMapPageTest" />
+			<class name="naveenautomation.tests.BrandsPageTest" />
+			<class name="naveenautomation.tests.SpecialsPageTest" />
+			<class name="naveenautomation.tests.WishListPageTest" />
+			<class name="naveenautomation.tests.OrderHistoryPageTest" />
+			<class name="naveenautomation.tests.DownloadPageTest" />
+			<class name="naveenautomation.tests.RecurringPaymentsPageTest" />
+			<class name="naveenautomation.tests.RewardPointsPageTest" />
+			<class name="naveenautomation.tests.AccountLogoutPageTest" />
+			<class name="naveenautomation.tests.ReturnPageTest" />
+			<class name="naveenautomation.tests.ProductId43PageTest" />
+			<class name="naveenautomation.tests.CartPageTest" />
+			<class name="naveenautomation.tests.AccountSuccessPageTest" />
+			<class name="naveenautomation.tests.CategoryAndPath24PageTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
