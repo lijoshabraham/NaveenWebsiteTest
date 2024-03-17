@@ -29,7 +29,7 @@ public class MyAccountPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 		page = new AccountLoginPage();
 	}
 

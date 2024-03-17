@@ -17,7 +17,7 @@ public class ContactUsPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 	}
 
 	@Test

@@ -19,7 +19,7 @@ public class AccountSuccessPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 	}
 
 	@Test

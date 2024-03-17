@@ -13,7 +13,7 @@ public class AccountLoginPageTest extends TestBase {
 	AccountLoginPage page;
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 	}
 	@Test
 	public void validateInvalidDataLogin() {

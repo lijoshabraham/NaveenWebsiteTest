@@ -15,7 +15,7 @@ public class DeliveryInformationPageTest extends TestBase{
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 	}
 
 	@Test

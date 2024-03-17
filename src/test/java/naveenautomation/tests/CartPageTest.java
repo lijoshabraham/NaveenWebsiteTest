@@ -19,7 +19,7 @@ public class CartPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 	}
 
 	@Test

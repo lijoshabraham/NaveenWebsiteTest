@@ -18,7 +18,7 @@ public class RecurringPaymentsPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 		page = new AccountLoginPage();
 	}
 

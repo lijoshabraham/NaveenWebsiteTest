@@ -18,7 +18,7 @@ public class AccountLogoutPageTest extends TestBase {
 
 	@BeforeMethod
 	public void launchBrowser() {
-		initialisation();
+		initialization();
 		page = new AccountLoginPage();
 	}
 
