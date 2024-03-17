@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class CartPage extends TestBase {
 	public CartPage() {
@@ -15,7 +16,7 @@ public class CartPage extends TestBase {
 	WebElement cartHeader;
 
 	public String getCartPageHeader() {
-		return cartHeader.getText();
+		return Utility.getTextFromWebelement(cartHeader);
 	}
 
 }

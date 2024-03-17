@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class DownloadPage extends TestBase {
 	public DownloadPage() {
@@ -15,7 +16,7 @@ public class DownloadPage extends TestBase {
 	WebElement downloadsHeading;
 
 	public String getAccountDowloadsHeading() {
-		return downloadsHeading.getText();
+		return Utility.getTextFromWebelement(downloadsHeading);
 	}
 
 }

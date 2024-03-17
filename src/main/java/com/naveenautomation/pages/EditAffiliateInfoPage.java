@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class EditAffiliateInfoPage extends TestBase {
 	public EditAffiliateInfoPage() {
@@ -30,19 +31,19 @@ public class EditAffiliateInfoPage extends TestBase {
 	WebElement continueBtn;
 
 	private void enterCompanyName(String name) {
-		company.sendKeys(name);
+		Utility.sendText(company, name);
 	}
 
 	private void enterWebsite(String name) {
-		website.sendKeys(name);
+		Utility.sendText(website, name);
 	}
 
 	private void enterTaxId(String name) {
-		taxId.sendKeys(name);
+		Utility.sendText(taxId, name);
 	}
 
 	private void enterChequePayeeName(String name) {
-		chequePayeeName.sendKeys(name);
+		Utility.sendText(chequePayeeName, name);
 	}
 
 	public MyAccountPage submitAffiliateInformation(String company, String website, String taxId, String payeName) {
@@ -50,7 +51,7 @@ public class EditAffiliateInfoPage extends TestBase {
 		enterWebsite(website);
 		enterTaxId(taxId);
 		enterChequePayeeName(payeName);
-		continueBtn.click();
+		Utility.clickOnElement(continueBtn);
 		return new MyAccountPage();
 
 	}

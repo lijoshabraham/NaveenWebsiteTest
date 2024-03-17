@@ -3,6 +3,86 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
+      <class name="naveenautomation.tests.AddressBookPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="validateUserCanAddNewAddress"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.AddressBookPageTest -->
+      <class name="naveenautomation.tests.AccountLogoutPageTest">
+        <methods>
+          <include name="validateAccountLogout"/>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.AccountLogoutPageTest -->
+      <class name="naveenautomation.tests.DownloadPageTest">
+        <methods>
+          <include name="validateDownloadsPageNavigation"/>
+          <include name="setUpLogger"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.DownloadPageTest -->
+      <class name="naveenautomation.tests.CartPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="verifyCartPageNavigation"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.CartPageTest -->
+      <class name="naveenautomation.tests.RewardPointsPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setUpLogger"/>
+          <include name="validateRecurringPaymentsPageNavigation"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.RewardPointsPageTest -->
+      <class name="naveenautomation.tests.RecurringPaymentsPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="validateRecurringPaymentsPageNavigation"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.RecurringPaymentsPageTest -->
+      <class name="naveenautomation.tests.ReturnPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="validatereturnPageNavigation"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.ReturnPageTest -->
+      <class name="naveenautomation.tests.OrderHistoryPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="validateOrderHistoryPageNavigation"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.OrderHistoryPageTest -->
+      <class name="naveenautomation.tests.TransactionsPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="validateTransactionsPageNavigation"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.TransactionsPageTest -->
+      <class name="naveenautomation.tests.HomePageTest">
+        <methods>
+          <include name="verifyAddtoCartFromHome"/>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- naveenautomation.tests.HomePageTest -->
       <class name="naveenautomation.tests.MyAccountPageTest">
         <methods>
           <include name="validateLogin"/>
@@ -23,78 +103,6 @@
           <include name="validateWishListPageNavigation"/>
         </methods>
       </class> <!-- naveenautomation.tests.WishListPageTest -->
-      <class name="naveenautomation.tests.AddressBookPageTest">
-        <methods>
-          <include name="setUpLogger"/>
-          <include name="validateUserCanAddNewAddress"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.AddressBookPageTest -->
-      <class name="naveenautomation.tests.DownloadPageTest">
-        <methods>
-          <include name="validateDownloadsPageNavigation"/>
-          <include name="setUpLogger"/>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.DownloadPageTest -->
-      <class name="naveenautomation.tests.ReturnPageTest">
-        <methods>
-          <include name="setUpLogger"/>
-          <include name="closeBrowser"/>
-          <include name="validatereturnPageNavigation"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.ReturnPageTest -->
-      <class name="naveenautomation.tests.RecurringPaymentsPageTest">
-        <methods>
-          <include name="setUpLogger"/>
-          <include name="closeBrowser"/>
-          <include name="validateRecurringPaymentsPageNavigation"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.RecurringPaymentsPageTest -->
-      <class name="naveenautomation.tests.AccountLogoutPageTest">
-        <methods>
-          <include name="validateAccountLogout"/>
-          <include name="setUpLogger"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.AccountLogoutPageTest -->
-      <class name="naveenautomation.tests.RewardPointsPageTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="setUpLogger"/>
-          <include name="validateRecurringPaymentsPageNavigation"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.RewardPointsPageTest -->
-      <class name="naveenautomation.tests.HomePageTest">
-        <methods>
-          <include name="verifyAddtoCartFromHome"/>
-          <include name="setUpLogger"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.HomePageTest -->
-      <class name="naveenautomation.tests.OrderHistoryPageTest">
-        <methods>
-          <include name="setUpLogger"/>
-          <include name="validateOrderHistoryPageNavigation"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.OrderHistoryPageTest -->
-      <class name="naveenautomation.tests.TransactionsPageTest">
-        <methods>
-          <include name="setUpLogger"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-          <include name="validateTransactionsPageNavigation"/>
-        </methods>
-      </class> <!-- naveenautomation.tests.TransactionsPageTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

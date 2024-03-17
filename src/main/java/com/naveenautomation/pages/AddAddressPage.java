@@ -3,8 +3,6 @@ package com.naveenautomation.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
 import com.naveenautomation.TestBases.TestBase;
 import com.naveenautomation.utility.Utility;
 
@@ -44,37 +42,35 @@ public class AddAddressPage extends TestBase {
 	WebElement continueBtn;
 
 	private void enterFirstName(String name) {
-		firstName.sendKeys(name);
+		Utility.sendText(firstName, name);
 	}
 
 	private void enterLastName(String name) {
-		lastName.sendKeys(name);
+		Utility.sendText(lastName, name);
 	}
 
 	private void enterCompany(String name) {
-		companyName.sendKeys(name);
+		Utility.sendText(companyName, name);
 	}
 
 	private void enterAddressOne(String name) {
-		addressOne.sendKeys(name);
+		Utility.sendText(addressOne, name);
 	}
 
 	private void enterCity(String name) {
-		city.sendKeys(name);
+		Utility.sendText(city, name);
 	}
 
 	private void enterPostCode(String name) {
-		postCode.sendKeys(name);
+		Utility.sendText(postCode, name);
 	}
 
 	private void selectCountry(String name) {
-		selectElement(country, name);
+		Utility.selectFromDropDownUsingVisibleText(country, name);
 	}
 
 	private void enterZone(String name) {
-		WebElement zoneElement = Utility.waitForElementClickable(driver, zone, 20);
-		zoneElement.click();
-		zoneElement.sendKeys(name);
+		Utility.selectFromDropDownUsingVisibleText(zone, name);
 	}
 
 	public AddressBookPage SubmitAddress(String name, String lastName, String company, String city, String address,
@@ -90,16 +86,6 @@ public class AddAddressPage extends TestBase {
 		continueBtn.click();
 
 		return new AddressBookPage();
-	}
-
-	private void selectElement(WebElement element, String text) {
-		Select sc = new Select(element);
-
-		try {
-			sc.selectByVisibleText(text);
-		} catch (Exception e) {
-			sc.selectByValue(text);
-		}
 	}
 
 }

@@ -48,21 +48,20 @@ public class HomePage extends TestBase {
 	List<WebElement> extrasWebElementList;
 
 	public void clickAddToCartIcon() {
-		Utility.waitForElementClickable(driver, addTocartIcon, 10);
-		addTocartIcon.click();
+		Utility.clickOnElement(addTocartIcon);
 	}
 
 	public ProductId43Page clickmacBookBtn() {
-		macBookBtn.click();
+		Utility.clickOnElement(macBookBtn);
 		return new ProductId43Page();
 	}
 
 	private void clickCartBtn() {
-		cartBtn.click();
+		Utility.clickOnElement(cartBtn);
 	}
 
 	private void clickViewCartBtn() {
-		viewCartBtn.click();
+		Utility.clickOnElement(viewCartBtn);
 	}
 
 	public CartPage navigateToViewCart() {
@@ -77,11 +76,11 @@ public class HomePage extends TestBase {
 	}
 
 	private void enterSearchData(String searchData) {
-		searchInputBox.sendKeys(searchData);
+		Utility.sendText(searchInputBox, searchData);
 	}
 
 	private void clickSearch() {
-		searchBtn.click();
+		Utility.clickOnElement(searchBtn);
 	}
 
 	// Information List

@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class ChangePwdPage extends TestBase {
 
@@ -23,15 +24,15 @@ public class ChangePwdPage extends TestBase {
 
 	private void enterPwd(String pwd) {
 		logger.info("Entering Password" + pwd);
-		this.pwd.sendKeys(pwd);
+		Utility.sendText(this.pwd, pwd);
 	}
 
 	private void enterConfirmPwd(String pwd) {
-		confirmPwd.sendKeys(pwd);
+		Utility.sendText(confirmPwd, pwd);
 	}
 
 	private void clickContinueBtn() {
-		continueBtn.click();
+		Utility.clickOnElement(continueBtn);
 	}
 
 	public MyAccountPage updatePassword(String pwd, String confirmPwd) {

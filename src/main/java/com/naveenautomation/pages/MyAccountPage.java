@@ -37,39 +37,38 @@ public class MyAccountPage extends TestBase {
 	List<WebElement> sideNavWebelementList;
 
 	public HomePage clickHomeLogo() {
-		Utility.waitForElementClickable(driver, homeLogo, 10);
-		homeLogo.click();
+		Utility.clickOnElement(homeLogo);
 		return new HomePage();
 	}
 
 	public ChangePwdPage clickChangePasswordBtn() {
-		changePwdBtn.click();
+		Utility.clickOnElement(changePwdBtn);
 		return new ChangePwdPage();
 	}
 
 	public String getPasswordUpdateAlertText() {
-		return successBanner.getText();
+		return Utility.getTextFromWebelement(successBanner);
 	}
 
 
 	public String getMyAccountText() {
-		return myAccountText.getText();
+		return Utility.getTextFromWebelement(myAccountText);
 	}
 
 	public String getEditAccountSuccessBanner() {
-		return successBanner.getText();
+		return Utility.getTextFromWebelement(successBanner);
 	}
 
 	public String getNewsletterSubscriptionSuccessBanner() {
-		return successBanner.getText();
+		return Utility.getTextFromWebelement(successBanner);
 	}
 
 	public String getEditAffiliateInfosuccessBanner() {
-		return editAffiliateInfosuccessBanner.getText();
+		return Utility.getTextFromWebelement(editAffiliateInfosuccessBanner);
 	}
 
 	public EditAffiliateInfoPage clickEditAffiliateInfoBtn() {
-		editAffiliateInfoBtn.click();
+		Utility.clickOnElement(editAffiliateInfoBtn);
 		return new EditAffiliateInfoPage();
 	}
 

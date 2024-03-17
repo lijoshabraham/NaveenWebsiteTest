@@ -3,9 +3,9 @@ package com.naveenautomation.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class CategoryAndPath24Page extends TestBase {
 	public CategoryAndPath24Page() {
@@ -19,26 +19,16 @@ public class CategoryAndPath24Page extends TestBase {
 	WebElement firstProduct;
 
 	private void selectSort(String name) {
-		selectElement(sortDropdown, name);
+		Utility.selectFromDropDownUsingVisibleText(sortDropdown, name);
 	}
 	
 	public String getFirstProductName() {
-		return firstProduct.getText();
+		return Utility.getTextFromWebelement(firstProduct);
 	}
 
 	public CategoryAndPath24Page SubmitSort(String sort) {
 		selectSort(sort);
 		return new CategoryAndPath24Page();
-	}
-
-	private void selectElement(WebElement element, String text) {
-		Select sc = new Select(element);
-
-		try {
-			sc.selectByVisibleText(text);
-		} catch (Exception e) {
-			sc.selectByValue(text);
-		}
 	}
 
 }

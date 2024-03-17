@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class AddressBookPage extends TestBase {
 
@@ -19,13 +20,12 @@ public class AddressBookPage extends TestBase {
 	WebElement alertBannerText;
 
 	public AddAddressPage clickNewAddressBtn() {
-		
-		newAddressBtn.click();
+		Utility.clickOnElement(newAddressBtn);
 		return new AddAddressPage();
 	}
 
 	public String getBannerText() {
-		return alertBannerText.getText();
+		return Utility.getTextFromWebelement(alertBannerText);
 	}
 
 }

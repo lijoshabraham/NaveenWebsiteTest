@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class BrandsPage extends TestBase {
 
@@ -16,7 +17,7 @@ public class BrandsPage extends TestBase {
 	WebElement brandPageHeader;
 
 	public String validateBrandPageHeader() {
-		return brandPageHeader.getText();
+		return Utility.getTextFromWebelement(brandPageHeader);
 	}
 
 }

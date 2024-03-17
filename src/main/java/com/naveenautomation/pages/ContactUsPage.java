@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class ContactUsPage extends TestBase {
 
@@ -29,23 +30,23 @@ public class ContactUsPage extends TestBase {
 
 	private void enterName(String name) {
 		logger.info("Entering Name" + name);
-		this.name.sendKeys(name);
+		Utility.sendText(this.name, name);
 	}
 
 	private void enterEmail(String email) {
-		this.email.sendKeys(email);
+		Utility.sendText(this.email, email);
 	}
 
 	private void enterEnquiryMessage(String message) {
-		this.enquiryMessage.sendKeys(message);
+		Utility.sendText(this.enquiryMessage, message);
 	}
 
 	private void clickSubmitBtn() {
-		submitBtn.click();
+		Utility.clickOnElement(submitBtn);
 	}
 	
 	public String validateContactFormSubmitMessage() {
-		return enquirySuccessMessage.getText();
+		return Utility.getTextFromWebelement(enquirySuccessMessage);
 	}
 
 	public ContactUsPage submitContactForm(String name, String email, String message) {

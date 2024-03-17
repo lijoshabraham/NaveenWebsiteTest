@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class AboutUsPage extends TestBase {
 
@@ -16,7 +17,7 @@ public class AboutUsPage extends TestBase {
 	WebElement aboutUsHeader;
 
 	public String getaboutUsHeader() {
-		return aboutUsHeader.getText();
+		return Utility.getTextFromWebelement(aboutUsHeader);
 	}
 
 }

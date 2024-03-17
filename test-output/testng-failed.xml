@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="naveenautomation.tests.MyAccountPageTest">
+      <class name="naveenautomation.tests.AddressBookPageTest">
         <methods>
           <include name="setUpLogger"/>
-          <include name="validateUserCanEditAffiliateInformation"/>
-          <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="validateUserCanAddNewAddress"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- naveenautomation.tests.MyAccountPageTest -->
+      </class> <!-- naveenautomation.tests.AddressBookPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

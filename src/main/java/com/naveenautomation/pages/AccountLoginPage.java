@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class AccountLoginPage extends TestBase {
 
@@ -17,48 +18,46 @@ public class AccountLoginPage extends TestBase {
 
 	@FindBy(id = "input-password")
 	WebElement pwdInput;
-	
+
 	@FindBy(css = "#content .row>div:first-of-type a")
 	WebElement newAccountContinueBtn;
 
 	@FindBy(css = "#content div>div form>input")
 	WebElement loginBtn;
-	
+
 	@FindBy(css = ".collapse>ul li:nth-of-type(6) a")
 	WebElement phoneAndPDABtn;
-	
+
 	@FindBy(css = "div.alert")
 	WebElement failureAlert;
-	
-	
+
 	public String getFailureAlert() {
-		return failureAlert.getText();
+		return Utility.getTextFromWebelement(failureAlert);
 	}
-	
-	
+
 	public AccountRegisterPage clickNewAccountContinueBtn() {
-		newAccountContinueBtn.click();
+		Utility.clickOnElement(newAccountContinueBtn);
 		return new AccountRegisterPage();
 	}
-	
+
 	public CategoryAndPath24Page clickphoneAndPDABtn() {
-		phoneAndPDABtn.click();
+		Utility.clickOnElement(phoneAndPDABtn);
 		return new CategoryAndPath24Page();
 	}
 
-
 	private void enterEmail(String email) {
 		logger.info("Entering Email" + email);
-		loginInput.sendKeys(email);
+		Utility.sendText(loginInput, email);
 	}
 
 	private void enterPassword(String pwd) {
 		logger.info("Entering Password" + pwd);
-		pwdInput.sendKeys(pwd);
+		Utility.sendText(pwdInput, pwd);
 	}
 
 	private void clickLogin() {
 		logger.info("Clicking login button");
+		Utility.clickOnElement(loginBtn);
 		loginBtn.click();
 	}
 

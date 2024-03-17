@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class EditAccountPage extends TestBase {
 	public EditAccountPage() {
@@ -23,19 +24,19 @@ public class EditAccountPage extends TestBase {
 	private void enterFirstName(String firstName) {
 		logger.info("Entering first name" + firstName);
 		this.firstName.clear();
-		this.firstName.sendKeys(firstName);
+		Utility.sendText(this.firstName, firstName);
 	}
 
 	private void enterLastName(String lastName) {
 		logger.info("Entering last name" + lastName);
 		this.lastName.clear();
-		this.lastName.sendKeys(lastName);
+		Utility.sendText(this.lastName, lastName);
 	}
 
 
 
 	private void clickSubmitBtn() {
-		submitBtn.click();
+		Utility.clickOnElement(submitBtn);
 	}
 
 	public MyAccountPage updateAccountDetails(String firstName, String lastName) {

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBases.TestBase;
+import com.naveenautomation.utility.Utility;
 
 public class DeliveryInformationPage extends TestBase{
 	public DeliveryInformationPage() {
@@ -16,7 +17,7 @@ public class DeliveryInformationPage extends TestBase{
 	WebElement deliveryPageHeader;
 
 	public String getdeliveryPageHeader() {
-		return deliveryPageHeader.getText();
+		return Utility.getTextFromWebelement(deliveryPageHeader);
 	}
 	
 }
