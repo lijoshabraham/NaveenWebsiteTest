@@ -45,11 +45,9 @@ public class TestBase {
     }
 
     private void setBrowserForTesting() {
+    	
+    	//Retrieve value of "browser" 
         String browserName = System.getProperty("browser");
-
-        if (browserName == null) {
-            throw new IllegalArgumentException("Browser parameter is not provided");
-        }
 
         Browsers browser = Browsers.valueOf(browserName.toUpperCase());
 
